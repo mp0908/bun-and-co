@@ -6,6 +6,9 @@
   <title>BUN&CO</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -14,114 +17,173 @@
 <header class="nav">
   <div class="logo">BUN<span>&</span>CO</div>
 
-  <nav class="nav-links">
+  <nav>
     <a href="#menu">Menu</a>
     <a href="#story">Story</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <button class="cart-btn" id="cartBtn">
+  <button id="cartBtn" class="cart-btn">
     Cart <span id="cartCount">0</span>
   </button>
 </header>
 
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <p class="badge">🔥 Fresh • Premium • Fast</p>
+<section class="hero reveal">
+  <div class="hero-left">
+    <span class="tag">🔥 Fresh • Modern • Premium</span>
 
     <h1>
-      Burgers made<br/>
-      for modern taste.
+      Burgers built<br/>
+      for real taste.
     </h1>
 
-    <p class="sub">
-      Minimal ingredients. Maximum flavor. Built for delivery & experience.
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
 
-    <button class="primary-btn">Explore Menu</button>
+    <button class="primary">Explore Menu</button>
   </div>
 
-  <div class="hero-image">
-    <img src="assets/images/hero-burger.png" alt="burger placeholder">
+  <div class="hero-right">
+    <img src="assets/images/heroburg.jpg" alt="Hero Burger">
   </div>
 </section>
 
 
 <!-- MENU -->
-<section id="menu" class="menu">
+<section id="menu" class="menu reveal">
 
-  <div class="section-header">
-    <h2>Our Burgers</h2>
-    <p>Swipe horizontally →</p>
+  <div class="section-head">
+    <h2>Our Menu</h2>
+    <p>Swipe or scroll →</p>
   </div>
 
   <div class="slider">
 
     <div class="card">
-      <div class="img-wrap">
-        <img src="assets/images/b1.png" alt="">
-      </div>
-
+      <img src="assets/images/b1.png">
       <h3>Classic Bun</h3>
-      <p>Beef, cheddar, pickles</p>
-
-      <div class="card-bottom">
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
         <span>$9.99</span>
         <button data-id="1">Add</button>
       </div>
     </div>
 
     <div class="card">
-      <div class="img-wrap">
-        <img src="assets/images/b2.png" alt="">
-      </div>
-
+      <img src="assets/images/b2.png">
       <h3>Smoky BBQ</h3>
-      <p>BBQ sauce, onion, beef</p>
-
-      <div class="card-bottom">
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
         <span>$10.99</span>
         <button data-id="2">Add</button>
       </div>
     </div>
 
     <div class="card">
-      <div class="img-wrap">
-        <img src="assets/images/b3.png" alt="">
-      </div>
-
+      <img src="assets/images/b3.png">
       <h3>Cheese Bomb</h3>
-      <p>Double cheese, crispy bun</p>
-
-      <div class="card-bottom">
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
         <span>$11.99</span>
         <button data-id="3">Add</button>
       </div>
     </div>
 
+    <div class="card">
+      <img src="assets/images/b4.png">
+      <h3>Spicy Heat</h3>
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
+        <span>$12.49</span>
+        <button data-id="4">Add</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/b5.png">
+      <h3>Double Stack</h3>
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
+        <span>$13.99</span>
+        <button data-id="5">Add</button>
+      </div>
+    </div>
+
+      <div class="card">
+      <img src="assets/images/b5.png">
+      <h3>Dry aged</h3>
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="bottom">
+        <span>$15.99</span>
+        <button data-id="6">Add</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- swipe hint -->
+  <div class="swipe-hint">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Swipe</span>
+    <i class="fa-solid fa-arrow-right"></i>
   </div>
 </section>
 
 
 <!-- STORY -->
-<section id="story" class="story">
-  <div class="story-box">
-    <h2>Our Story</h2>
-    <p>
-      BUN&CO is built on simplicity. We believe great burgers don’t need complexity —
-      just perfect ingredients and execution.
-    </p>
+<section id="story" class="story reveal">
+
+  <div class="story-grid">
+
+    <div class="story-card">
+      <h2>Our Story</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+      </p>
+    </div>
+
+    <div class="story-card">
+      <h2>Our Philosophy</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+      </p>
+    </div>
+
   </div>
+
 </section>
 
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
+<section id="contact" class="contact reveal">
   <h2>Contact</h2>
-  <p>Order online or visit our store.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-left">
+    <h3>BUN&CO</h3>
+    <p>Modern burger experience</p>
+  </div>
+
+  <div class="socials">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+  </div>
+
+</footer>
 
 
 <!-- CART -->
