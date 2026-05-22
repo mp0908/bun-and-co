@@ -1,3 +1,7 @@
+const body = document.body;
+const menuToggle = document.getElementById("menuToggle");
+const siteNav = document.getElementById("siteNav");
+
 const cartBtn = document.getElementById("cartBtn");
 const cart = document.getElementById("cart");
 const cartCount = document.getElementById("cartCount");
@@ -5,30 +9,41 @@ const cartItems = document.getElementById("cartItems");
 
 let cartData = [];
 
-/* CART TOGGLE */
+if (menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = body.classList.toggle("menu-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+if (siteNav) {
+  siteNav.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      body.classList.remove("menu-open");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
 cartBtn.addEventListener("click", () => {
   cart.classList.toggle("active");
 });
 
-/* ADD TO CART ubacuje u kolica*/
-document.addEventListener("click", (e) => {
-  if (e.target.dataset.id) {
-    cartData.push(e.target.dataset.id);
-
+document.addEventListener("click", (event) => {
+  if (event.target.dataset.id) {
+    cartData.push(event.target.dataset.id);
     cartCount.textContent = cartData.length;
 
     const item = document.createElement("div");
-    item.textContent = "Burger #" + e.target.dataset.id;
-
+    item.textContent = "Burger #" + event.target.dataset.id;
     cartItems.appendChild(item);
   }
 });
 
-/* SCROLL REVEAL kontent reveal na skrolu */
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("active");
     }
@@ -37,4 +52,4 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15
 });
 
-reveals.forEach(el => observer.observe(el));
+reveals.forEach((element) => observer.observe(element));

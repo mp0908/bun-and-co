@@ -2,198 +2,248 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BUN&CO</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
+  <header class="nav">
+    <a href="#top" class="logo">BUN<span>&</span>CO</a>
 
-<!-- NAV -->
-<header class="nav">
-  <div class="logo">BUN<span>&</span>CO</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <nav>
-    <a href="#menu">Menu</a>
-    <a href="#story">Story</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav id="siteNav" class="site-nav">
+      <a href="#top">Home</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#menu">Menu</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <button id="cartBtn" class="cart-btn">
-    Cart <span id="cartCount">0</span>
-  </button>
-</header>
+    <button id="cartBtn" class="cart-btn">
+      Cart <span id="cartCount">0</span>
+    </button>
+  </header>
 
+  <main id="top">
+    <section class="hero reveal">
+      <div class="hero-left">
+        <span class="tag">Open flame kitchen • Crafted burgers • Late city energy</span>
+        <p class="eyebrow">Burger bar with a cleaner attitude</p>
 
-<!-- HERO -->
-<section class="hero reveal">
-  <div class="hero-left">
-    <span class="tag">🔥 Fresh • Modern • Premium</span>
+        <h1>
+          A burger place that feels
+          alive, sharp and worth the stop.
+        </h1>
 
-    <h1>
-      Burgers built<br/>
-      for real taste.
-    </h1>
+        <p class="hero-copy">
+          BUN&CO brings together buttery toasted buns, patient grilling, bold sauces and a room that feels more like a city hangout than a fast-food stop. The idea is simple: familiar comfort, treated with more care, more taste and much better presence.
+        </p>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
+        <div class="hero-actions">
+          <a href="#menu" class="primary">See Signature Picks</a>
+          <a href="#story" class="secondary">Why We Built This</a>
+        </div>
 
-    <button class="primary">Explore Menu</button>
-  </div>
-
-  <div class="hero-right">
-    <img src="assets/images/heroburg.jpg" alt="Hero Burger">
-  </div>
-</section>
-
-
-<!-- MENU -->
-<section id="menu" class="menu reveal">
-
-  <div class="section-head">
-    <h2>Our Menu</h2>
-    <p>Swipe or scroll →</p>
-  </div>
-
-  <div class="slider">
-
-    <div class="card">
-      <img src="assets/images/b1.png">
-      <h3>Classic Bun</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$9.99</span>
-        <button data-id="1">Add</button>
+        <div class="hero-points">
+          <div class="point">
+            <strong>12h</strong>
+            <span>slow-prepped kitchen flow</span>
+          </div>
+          <div class="point">
+            <strong>100%</strong>
+            <span>focus on texture and balance</span>
+          </div>
+          <div class="point">
+            <strong>Late</strong>
+            <span>perfect for lunch, dinner and post-night cravings</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="assets/images/b2.png">
-      <h3>Smoky BBQ</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$10.99</span>
-        <button data-id="2">Add</button>
+      <div class="hero-right">
+        <div class="hero-image-card">
+          <img src="assets/images/heroburg.jpg" alt="Signature burger from BUN&CO">
+          <div class="image-note">
+            <span>Signature Drop</span>
+            <strong>Double sear, melted cheddar, house onions</strong>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="assets/images/b3.png">
-      <h3>Cheese Bomb</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$11.99</span>
-        <button data-id="3">Add</button>
+    <section id="highlights" class="highlights reveal">
+      <div class="section-head compact">
+        <p class="section-kicker">More than a basic burger page</p>
+        <h2>The place should feel premium before the first bite.</h2>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="assets/images/b4.png">
-      <h3>Spicy Heat</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$12.49</span>
-        <button data-id="4">Add</button>
+      <div class="highlights-grid">
+        <article class="info-card">
+          <span class="card-label">01</span>
+          <h3>Kitchen that respects detail</h3>
+          <p>Every layer has a job, from the softness of the bun to the sharpness of pickles and the finish of the sauce. Nothing is added just to fill space.</p>
+        </article>
+
+        <article class="info-card accent">
+          <span class="card-label">02</span>
+          <h3>Food built for repeat visits</h3>
+          <p>The menu keeps things focused, but every item has enough character to feel memorable. Big flavor, clean combinations and no overloaded chaos.</p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-label">03</span>
+          <h3>Space with real rhythm</h3>
+          <p>Warm light, darker tones, stronger contrast and a straightforward layout create the feeling of a modern spot you want to come back to, not just order from once.</p>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="assets/images/b5.png">
-      <h3>Double Stack</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$13.99</span>
-        <button data-id="5">Add</button>
+    <section id="menu" class="menu reveal">
+      <div class="section-head">
+        <p class="section-kicker">Signature selection</p>
+        <h2>A tighter menu with more identity.</h2>
+        <p class="section-copy">Instead of generic filler, each burger gets a clearer profile, richer description and enough visual space to stand on its own.</p>
       </div>
-    </div>
 
-      <div class="card">
-      <img src="assets/images/b5.png">
-      <h3>Dry aged</h3>
-      <p>Lorem ipsum dolor sit amet</p>
-      <div class="bottom">
-        <span>$15.99</span>
-        <button data-id="6">Add</button>
+      <div class="menu-grid">
+        <article class="card">
+          <span class="menu-tag">House favorite</span>
+          <h3>Classic Bun</h3>
+          <p>A balanced stack with smashed beef, cheddar, shredded lettuce, pickles and our house burger sauce on a glossy toasted bun.</p>
+          <div class="bottom">
+            <span>$9.99</span>
+            <button data-id="1">Add</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="menu-tag">Smoky finish</span>
+          <h3>Smoky BBQ</h3>
+          <p>Deep barbecue glaze, crispy onions and a darker grilled edge that lands somewhere between comfort food and weekend indulgence.</p>
+          <div class="bottom">
+            <span>$10.99</span>
+            <button data-id="2">Add</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="menu-tag">Rich and bold</span>
+          <h3>Cheese Bomb</h3>
+          <p>For guests who want the melt to lead: layered cheddar, creamy cheese sauce and a soft bun that keeps the whole bite together.</p>
+          <div class="bottom">
+            <span>$11.99</span>
+            <button data-id="3">Add</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="menu-tag">Heat level up</span>
+          <h3>Spicy Heat</h3>
+          <p>Chili glaze, jalapeno crunch and a quick sharp finish that stays exciting without overpowering the burger itself.</p>
+          <div class="bottom">
+            <span>$12.49</span>
+            <button data-id="4">Add</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="menu-tag">Big appetite</span>
+          <h3>Double Stack</h3>
+          <p>Two patties, twice the sear and extra bite in every layer. Heavier, fuller and made for the kind of hunger that wants a proper answer.</p>
+          <div class="bottom">
+            <span>$13.99</span>
+            <button data-id="5">Add</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="menu-tag">Premium cut</span>
+          <h3>Dry Aged Special</h3>
+          <p>A deeper beef profile with a more mature finish, balanced by onion jam and a cleaner sauce line that lets the meat speak first.</p>
+          <div class="bottom">
+            <span>$15.99</span>
+            <button data-id="6">Add</button>
+          </div>
+        </article>
       </div>
+    </section>
+
+    <section id="story" class="story reveal">
+      <div class="section-head">
+        <p class="section-kicker">Brand direction</p>
+        <h2>The story now feels more complete.</h2>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <h3>Our Story</h3>
+          <p>BUN&CO started from a very simple frustration: too many burger places looked loud online but felt empty in person. We wanted to build a brand that looked cleaner, felt more confident and translated the same quality from screen to counter to table.</p>
+          <p>That is why the concept leans into fewer distractions, better ingredients, a sharper visual identity and a more urban tone. It should feel premium, but still approachable enough for a casual stop with friends.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Our Philosophy</h3>
+          <p>We do not chase complexity for its own sake. The best burger is often about restraint: solid meat, clear seasoning, proper sauce balance and textures that stay interesting from the first bite to the last.</p>
+          <p>The same approach shapes the site. Clear sections, stronger hierarchy, better spacing and content that says something real make the whole experience feel more considered and less generic.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <div class="contact-shell">
+        <div>
+          <p class="section-kicker">Visit or reach out</p>
+          <h2>Built for people who want more than a quick scroll.</h2>
+          <p class="section-copy">Drop in for a late lunch, bring the crew in the evening, or just stop by when you want a burger place that feels tighter, moodier and better put together than the usual template.</p>
+        </div>
+
+        <div class="contact-card">
+          <div>
+            <span class="contact-label">Location</span>
+            <strong>Downtown corner spot, city center</strong>
+          </div>
+          <div>
+            <span class="contact-label">Hours</span>
+            <strong>Mon-Sun / 12:00 - 00:00</strong>
+          </div>
+          <div>
+            <span class="contact-label">Contact</span>
+            <strong>hello@bunandco.com</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <h3>BUN&CO</h3>
+      <p>Modern burger experience with a sharper visual edge.</p>
     </div>
 
+    <div class="socials">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <div class="cart" id="cart">
+    <h3>Your Order</h3>
+    <div id="cartItems"></div>
+    <button class="checkout">Checkout</button>
   </div>
 
-  <!-- swipe hint -->
-  <div class="swipe-hint">
-    <i class="fa-solid fa-arrow-left"></i>
-    <span>Swipe</span>
-    <i class="fa-solid fa-arrow-right"></i>
-  </div>
-</section>
-
-
-<!-- STORY -->
-<section id="story" class="story reveal">
-
-  <div class="story-grid">
-
-    <div class="story-card">
-      <h2>Our Story</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-      </p>
-    </div>
-
-    <div class="story-card">
-      <h2>Our Philosophy</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact reveal">
-  <h2>Contact</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="footer-left">
-    <h3>BUN&CO</h3>
-    <p>Modern burger experience</p>
-  </div>
-
-  <div class="socials">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-x-twitter"></i></a>
-  </div>
-
-</footer>
-
-
-<!-- CART -->
-<div class="cart" id="cart">
-  <h3>Your Order</h3>
-  <div id="cartItems"></div>
-  <button class="checkout">Checkout</button>
-</div>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
