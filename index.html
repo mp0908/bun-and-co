@@ -45,12 +45,12 @@
         </h1>
 
         <p class="hero-copy">
-          BUN&CO brings together buttery toasted buns, patient grilling, bold sauces and a room that feels more like a city hangout than a fast-food stop. The idea is simple: familiar comfort, treated with more care, more taste and much better presence.
+          BUN&CO brings together buttery toasted buns, patient grilling, bold sauces and a room that feels more like a late-night London hangout than a standard fast-food stop. The idea is simple: familiar comfort, treated with more care, more taste and much better presence.
         </p>
 
         <div class="hero-actions">
           <a href="#menu" class="primary">See Signature Picks</a>
-          <a href="#story" class="secondary">Why We Built This</a>
+          <a href="#checkout" class="secondary">Go To Checkout</a>
         </div>
 
         <div class="hero-points">
@@ -63,8 +63,8 @@
             <span>focus on texture and balance</span>
           </div>
           <div class="point">
-            <strong>Late</strong>
-            <span>perfect for lunch, dinner and post-night cravings</span>
+            <strong>Fast</strong>
+            <span>simple ordering flow for quick pickup or delivery</span>
           </div>
         </div>
       </div>
@@ -101,8 +101,8 @@
 
         <article class="info-card">
           <span class="card-label">03</span>
-          <h3>Space with real rhythm</h3>
-          <p>Warm light, darker tones, stronger contrast and a straightforward layout create the feeling of a modern spot you want to come back to, not just order from once.</p>
+          <h3>Ordering made simpler</h3>
+          <p>From menu browsing to checkout, the site now guides people more clearly so ordering feels natural, quick and user-friendly on both desktop and mobile.</p>
         </article>
       </div>
     </section>
@@ -183,6 +183,60 @@
       </div>
     </section>
 
+    <section id="checkout" class="checkout-section reveal">
+      <div class="section-head">
+        <p class="section-kicker">Simple checkout</p>
+        <h2>Ready to move from craving to order.</h2>
+        <p class="section-copy">The flow stays intentionally light: review your cart, enter a few details and confirm the order. No clutter, no confusing steps.</p>
+      </div>
+
+      <div class="checkout-layout">
+        <div class="checkout-panel">
+          <div class="checkout-review">
+            <div class="checkout-headline">
+              <h3>Order Summary</h3>
+              <span id="checkoutItemCount">0 items</span>
+            </div>
+            <div id="checkoutItems" class="checkout-items"></div>
+            <div class="checkout-total">
+              <span>Total</span>
+              <strong id="checkoutTotal">$0.00</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-panel">
+          <form id="checkoutForm" class="checkout-form">
+            <div class="form-row">
+              <label for="customerName">Full Name</label>
+              <input id="customerName" name="customerName" type="text" placeholder="Your name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="customerPhone">Phone</label>
+              <input id="customerPhone" name="customerPhone" type="tel" placeholder="+44 20 7946 0958" required>
+            </div>
+
+            <div class="form-row">
+              <label for="orderType">Order Type</label>
+              <select id="orderType" name="orderType">
+                <option value="Pickup">Pickup</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="customerAddress">Address or pickup note</label>
+              <textarea id="customerAddress" name="customerAddress" rows="4" placeholder="Street, number or any short note" required></textarea>
+            </div>
+
+            <button type="submit" class="checkout-submit">Place Order</button>
+            <p id="checkoutMessage" class="checkout-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section id="story" class="story reveal">
       <div class="section-head">
         <p class="section-kicker">Brand direction</p>
@@ -209,13 +263,13 @@
         <div>
           <p class="section-kicker">Visit or reach out</p>
           <h2>Built for people who want more than a quick scroll.</h2>
-          <p class="section-copy">Drop in for a late lunch, bring the crew in the evening, or just stop by when you want a burger place that feels tighter, moodier and better put together than the usual template.</p>
+          <p class="section-copy">Drop in for a late lunch, bring the crew in the evening, or just stop by when you want a burger place that feels tighter, brighter and better put together than the usual template.</p>
         </div>
 
         <div class="contact-card">
           <div>
             <span class="contact-label">Location</span>
-            <strong>Downtown corner spot, city center</strong>
+            <strong>Soho corner spot, central London</strong>
           </div>
           <div>
             <span class="contact-label">Hours</span>
@@ -241,16 +295,33 @@
     </a>
   </footer>
 
-  <div class="cart" id="cart">
+  <aside class="cart" id="cart">
     <div class="cart-head">
       <h3>Your Order</h3>
       <button id="cartCloseBtn" class="cart-close" aria-label="Close cart">
         <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
-    <div id="cartItems"></div>
-    <button class="checkout">Checkout</button>
-  </div>
+
+    <div id="cartEmpty" class="cart-empty">
+      Your cart is empty. Add a burger and we will prepare the rest.
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Items</span>
+        <strong id="cartSummaryCount">0</strong>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <strong id="cartSummaryTotal">$0.00</strong>
+      </div>
+    </div>
+
+    <button id="checkoutBtn" class="checkout">Proceed To Checkout</button>
+  </aside>
 
   <script src="script.js"></script>
 </body>
