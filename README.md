@@ -26,27 +26,27 @@ The site combines a strong hero section, signature burger cards, story-driven br
 
 ### Landing
 
-![BUN&CO landing preview](assets/screenshots/landing-desktop.png)
+![BUN&CO landing preview](assets/screenshots/landing.png)
 
 ### Menu
 
-![BUN&CO menu preview](assets/screenshots/menu-desktop.png)
+![BUN&CO menu preview](assets/screenshots/menu.png)
 
 ### Story
 
-![BUN&CO story preview](assets/screenshots/story-desktop.png)
+![BUN&CO story preview](assets/screenshots/story.png)
 
 ## Project Structure
 
 ```text
 bun and co/
-├─ assets/
-│  ├─ images/
-│  └─ screenshots/
-├─ index.html
-├─ style.css
-├─ script.js
-└─ README.md
+|- assets/
+|  |- images/
+|  |- screenshots/
+|- index.html
+|- style.css
+|- script.js
+|- README.md
 ```
 
 ## Local Preview
