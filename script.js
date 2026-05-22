@@ -4,6 +4,7 @@ const siteNav = document.getElementById("siteNav");
 
 const cartBtn = document.getElementById("cartBtn");
 const cart = document.getElementById("cart");
+const cartCloseBtn = document.getElementById("cartCloseBtn");
 const cartCount = document.getElementById("cartCount");
 const cartItems = document.getElementById("cartItems");
 
@@ -28,6 +29,12 @@ if (siteNav) {
 cartBtn.addEventListener("click", () => {
   cart.classList.toggle("active");
 });
+
+if (cartCloseBtn) {
+  cartCloseBtn.addEventListener("click", () => {
+    cart.classList.remove("active");
+  });
+}
 
 document.addEventListener("click", (event) => {
   if (event.target.dataset.id) {
